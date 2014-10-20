@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>popup</title>
+	<link href="css/style.css" type="text/css" rel="stylesheet">
+	<script src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<h1>Всплывающие окна</h1>
+		<ul>
+			<li>
+				<p><a href="#" id="s1">Способ 1.</a>Один из самих лучших и простых. Использование display: table-cell + vertical-align: middle для вертикального центрирования.<p>
+				<p>Преимущества:</p>
+				<ul class="list">
+					<li>Изменяемая высота</li>
+					<li>Верстка не едет при большом количестве текста в блоке</li>
+					<li>Кроссбраузерность</li>
+				</ul>
+				<p>Недостатки:</p>
+				<ul class="list">
+					<li>Сложная структура (дополнительная разметка)</li>
+				</ul>
+			</li>
+			<hr>
+			<li>
+				<p><a href="#" id="s2">Способ 2.</a> Использование margin: auto. Для того чтобы это свойство работало по вертикали, необходимо задать position: absolute; top: 0; left: 0; bottom: 0; right: 0 и задать высоту.</p>
+				<p>Преимущества:</p>
+				<ul class="list">
+					<li>Кроссбраузерность (включая IE 8-10)</li>
+					<li>Никакой дополнительной разметки, минимум стилей</li>
+					<li>Адаптивность</li>
+					<li>Работает для изображений</li>
+				</ul>
+				<p>Недостатки:</p>
+				<ul class="list">
+					<li>Должна быть задана высота</li>
+					<li>Рекомендуется задать overflow: auto, чтобы контент не расползался</li>
+					<li>Говорят не работает на Windows Phone</li>
+				</ul>
+			</li>
+			<hr>
+			<li>
+				<p><a href="#" id="s3">Способ 3.</a> Центрирование блока с помощью jQuery. Весь функционал встроен в функцию $(window).resize(), которая выполняется при каждом изменении окна браузера и центрирует абсолютно спозиционированный блок изменяя значения top и left.</p>
+				<p>Преимущества:</p>
+				<ul class="list">
+					<li>Кроссбраузерность</li>
+					<li>Простая разметка</li>
+					<li>Адаптивность</li>
+				</ul>
+				<p>Недостатки:</p>
+				<ul class="list">
+					<li>Более сложная реализация</li>
+					<li>Зачем подключать скрипт, если можно сделать через table-cell :)</li>
+				</ul>
+			</li>
+			<hr>
+			<li>Так же для реализации модальных окон можно использовать готовые решения таких фреймворков как bootstrap и foundation.</li>
+		</ul>
+	</div>
+	<div class="popup1">
+		<div class="table-cell">
+			<div class="center-block center-block-style">
+				<a href="#" class="close" id="close1"><img src="img/close.png" width="13" height="13"></a>
+				<div class="clear"></div>
+				<p class="bold">Method 1</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse venenatis aliquam turpis eget bibendum. In hac habitasse platea dictumst. Suspendisse venenatis in leo ac faucibus. Sed odio eros, sagittis in eros at, efficitur accumsan dolor. Etiam imperdiet nibh sapien. Morbi pulvinar quam luctus, finibus dui vitae, semper urna. Donec eu mi suscipit, consectetur elit sit amet, vehicula nulla. Pellentesque gravida metus non viverra imperdiet. Nulla facilisi.</p>
+				<p>Fusce sed congue nisl. Integer laoreet placerat libero sed accumsan. Maecenas nisi nisi, finibus congue elit at, fringilla consectetur justo. Integer nec purus at lectus porta porta. Nunc non ultricies lacus. Aliquam orci diam, facilisis sed purus nec, semper tincidunt ante. Nullam a imperdiet tortor, sit amet laoreet sem. Integer sed justo non mi aliquet ornare.</p>
+				<p>Quisque eget dapibus metus. Praesent ornare efficitur erat eu consequat. Donec egestas gravida turpis ut viverra. Aenean et augue in orci scelerisque molestie. Nullam aliquam lectus eu elit venenatis, sit amet lacinia nulla malesuada. Praesent ut volutpat sapien. Duis non magna vel lectus euismod congue. Ut molestie aliquet velit, vitae accumsan neque facilisis vitae. Nam ut enim risus. Donec aliquet lorem felis, ut faucibus eros maximus eu.</p>
+			</div>
+		</div>
+	</div>
+	<div class="popup2">
+		<div class="center-block2 center-block-style">
+			<a href="#" class="close" id="close2"><img src="img/close.png" width="13" height="13"></a>
+			<div class="clear"></div>
+			<p class="bold">Method 2</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse venenatis aliquam turpis eget bibendum. In hac habitasse platea dictumst. Suspendisse venenatis in leo ac faucibus. Sed odio eros, sagittis in eros at, efficitur accumsan dolor. Etiam imperdiet nibh sapien. Morbi pulvinar quam luctus, finibus dui vitae, semper urna. Donec eu mi suscipit, consectetur elit sit amet, vehicula nulla. Pellentesque gravida metus non viverra imperdiet. Nulla facilisi.</p>
+			<p>Fusce sed congue nisl. Integer laoreet placerat libero sed accumsan. Maecenas nisi nisi, finibus congue elit at, fringilla consectetur justo. Integer nec purus at lectus porta porta. Nunc non ultricies lacus. Aliquam orci diam, facilisis sed purus nec, semper tincidunt ante. Nullam a imperdiet tortor, sit amet laoreet sem. Integer sed justo non mi aliquet ornare.</p>
+			<p>Quisque eget dapibus metus. Praesent ornare efficitur erat eu consequat. Donec egestas gravida turpis ut viverra. Aenean et augue in orci scelerisque molestie. Nullam aliquam lectus eu elit venenatis, sit amet lacinia nulla malesuada. Praesent ut volutpat sapien. Duis non magna vel lectus euismod congue. Ut molestie aliquet velit, vitae accumsan neque facilisis vitae. Nam ut enim risus. Donec aliquet lorem felis, ut faucibus eros maximus eu.</p>
+		</div>
+	</div>
+	<div class="popup3">
+		<div class="center-block3 center-block-style">
+			<a href="#" class="close" id="close3"><img src="img/close.png" width="13" height="13"></a>
+			<div class="clear"></div>
+			<p class="bold">Method 3</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse venenatis aliquam turpis eget bibendum. In hac habitasse platea dictumst. Suspendisse venenatis in leo ac faucibus. Sed odio eros, sagittis in eros at, efficitur accumsan dolor. Etiam imperdiet nibh sapien. Morbi pulvinar quam luctus, finibus dui vitae, semper urna. Donec eu mi suscipit, consectetur elit sit amet, vehicula nulla. Pellentesque gravida metus non viverra imperdiet. Nulla facilisi.</p>
+			<p>Fusce sed congue nisl. Integer laoreet placerat libero sed accumsan. Maecenas nisi nisi, finibus congue elit at, fringilla consectetur justo. Integer nec purus at lectus porta porta. Nunc non ultricies lacus. Aliquam orci diam, facilisis sed purus nec, semper tincidunt ante. Nullam a imperdiet tortor, sit amet laoreet sem. Integer sed justo non mi aliquet ornare.</p>
+			<p>Quisque eget dapibus metus. Praesent ornare efficitur erat eu consequat. Donec egestas gravida turpis ut viverra. Aenean et augue in orci scelerisque molestie. Nullam aliquam lectus eu elit venenatis, sit amet lacinia nulla malesuada. Praesent ut volutpat sapien. Duis non magna vel lectus euismod congue. Ut molestie aliquet velit, vitae accumsan neque facilisis vitae. Nam ut enim risus. Donec aliquet lorem felis, ut faucibus eros maximus eu.</p>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).ready(function(){
+		$("#s1").click(function(){
+			$(".popup1").css("display","table");
+		});
+		$("#close1").click(function(){
+			$(".popup1").css("display","none");
+		});
+		$("#s2").click(function(){
+			$(".popup2").css("display","block");
+		});
+		$("#close2").click(function(){
+			$(".popup2").css("display","none");
+		});
+		$("#s3").click(function(){
+			$(".popup3").css("display","block");
+			resizeBlock();
+		});
+		$("#close3").click(function(){
+			$(".popup3").css("display","none");
+		});
+
+		$(window).on("resize", resizeBlock);
+
+		function resizeBlock() {
+			$(".center-block3").css({
+				position: 'absolute',
+				left: ($(document).width()-$('.center-block3').outerWidth())/2,
+				top: ($(document).height()-$('.center-block3').outerHeight())/2
+			});
+		};
+	});
+</script>
+</body>
+</html>
